@@ -1,5 +1,5 @@
 import { Route, Switch  } from "react-router-dom";
-import {SignUp , Login , Home , BorrowedBooks} from '../pages'
+import {SignUp , Login , Home , BorrowedBooks, CreateBook} from '../pages'
 import  PrivateRoute from '../middlewares/auth.component';
 export default function userRoutes() {
 
@@ -23,6 +23,11 @@ export default function userRoutes() {
             auth:true,
             path:'/borrowed-books',
             component: BorrowedBooks
+        },
+        {
+            auth:true,
+            path:'/create-books',
+            component: CreateBook
         }
 ]
 

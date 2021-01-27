@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
-import Root from './routers/routes'
-import { initDataBase } from './tools'
+import  { useEffect } from "react";
+import Root from "./routers/routes";
+import { initDataBase } from "./tools";
+
 function App() {
   useEffect(() => {
-    initDataBase()
-  }, [])
-  return (
-  <Root />
-  );
+    initDataBase();
+  }, []);
+  return <Root />;
 }
 
 export default App;

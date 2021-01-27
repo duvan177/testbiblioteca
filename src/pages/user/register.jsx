@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Controller, useForm } from "react-hook-form";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SignUp() {
+export default function SignUp({history}) {
     const {  handleSubmit, errors, control } = useForm();
     const onSubmit = data => {
         registerUser(data);
@@ -38,7 +38,9 @@ export default function SignUp() {
         Users.push(newUser);
         localStorage.setItem('usuarios' , JSON.stringify(Users));
         console.log('nuevo user' ,Users);
+        history.push('/login')
     }
+
 
     const classes = useStyles();
 
@@ -128,8 +130,8 @@ export default function SignUp() {
 
                                     />}
                             />
-                            {errors.contrasena?.type == "required" && <span style={{ color: "red" }}>valor requerido</span>}
-                            {errors.contrasena?.type == "minLength" && <span style={{ color: "red" }}>debe contener minimo 6 carácteres</span>}
+                            {errors.password?.type == "required" && <span style={{ color: "red" }}>valor requerido</span>}
+                            {errors.password?.type == "minLength" && <span style={{ color: "red" }}>debe contener minimo 6 carácteres</span>}
                       
                         </Grid>
 

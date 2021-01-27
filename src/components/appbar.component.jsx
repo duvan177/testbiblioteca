@@ -11,17 +11,24 @@ import { Logout } from '../tools'
 
 const ButtonUser = ({push , goBack}) => {
   const userAuth = localStorage.getItem('usuarioAuth');
+  const user = JSON.parse(userAuth);
   return (
     <>
     {
     userAuth ? (
       <>
+
     <Button href={goBack ? '/' : '/borrowed-books'} color="primary" variant="outlined" className={""}>
      {
        goBack ? 'ver libros': 'mis libros prestados'
      } 
   </Button>
-    <Button href="#" onClick={()=>Logout(push)} color="primary" variant="outlined" className={""}>
+     {
+       user.rol ==  1 && (<Button href="/create-books" color="secondary" variant="outlined" className={""}>
+         Crear Libros
+ </Button>)
+     }
+    <Button href="#" onClick={()=>Logout(push)} color="secondary" variant="contained" className={""}>
       Cerrar sesion
 </Button>
 </>
