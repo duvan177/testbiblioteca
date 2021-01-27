@@ -15,9 +15,11 @@ abre  [http://localhost:3000](http://localhost:3000) en tu explorador
 ## administrador:
 
 nombre de usuario: admin
+
 contraseña: 12345678A
 
 ## usuario:
 
 nombre de usuario: usuario 
+
 contraseña: 12345678A
