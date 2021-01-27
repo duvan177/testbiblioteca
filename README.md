@@ -23,3 +23,8 @@ contraseña: 12345678A
 nombre de usuario: usuario 
 
 contraseña: 12345678A
+
+
+## Recomendaciones:
+
+La aplicación no cuenta con endpoint para guardar la informacion asi que será alamacenda en el LocalStorage de tu ecplorador, en caso de error limpia el almacenamiento del navegador y corre nuevamente la aplicación.
