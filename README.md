@@ -12,12 +12,12 @@ abre  [http://localhost:3000](http://localhost:3000) en tu explorador
 
 ### `Usuarios predeterminados`
 
-administrador:
+## administrador:
 
 nombre de usuario: admin
 contraseña: 12345678A
 
-usuario:
+## usuario:
 
-nombre de usuario: usuario
+nombre de usuario: usuario 
 contraseña: 12345678A
